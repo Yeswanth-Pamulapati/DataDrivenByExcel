@@ -27,7 +27,7 @@ int numberOfSheets = workbook.getNumberOfSheets();
 ->Use getSheetName(int sheetsindex) to get the sheet name by passing the index of sheet
 ->Use getSheetAt(int sheetsindex) to get access to sheet by using the index of sheet
 4)Now get the access to the column from the sheet that contains the required data
-for example: There is a sales data file and you want to get details of whoever bought a cellphone.
+for example: There is a sales data file ,and you want to get details of whoever bought a cellphone.
 ->For this access the row where the column names present then
 ->locate the column with the name "items" which contains the cellphone value.
 TO do this iterate through the rows of the sheet using java Iterator class
