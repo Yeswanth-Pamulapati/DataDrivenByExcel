@@ -1,0 +1,38 @@
+Apache POI API is used to access Microsoft format files.
+In order to access data from the Excel sheet we need to add Apache POI jar files or dependencies to the project
+This is an open source library that helps to access data from the excel sheet.
+ADD Dependencies:
+1)First add apache poi-ooxml dependency
+2)Next add apache Poi dependency
+These "poi-ooxml" and "poi" dependencies are important to extract data from excel
+STRATEGIES TO ACCESS THE EXCEL DATA:
+-> Create an object XSSFWorkbook class.
+-> Get access to sheet in excel file
+-> Get access to all rows of sheet.
+-> Get access to specific row from all rows
+-> Access data from excel to arrays
+PROCEDURE:
+1)First get the desired excel file path and cover that path to fileinputstream as follows
+FileInputStream fis = new FileInputStream("C//...filepath");
+2)Create a XSSFWorkbook instance and pass the file input stream to it's class.
+XSSFWorkbook workbook = new XSSFWorkbook(inputFile);
+3)Now get access to the specific sheet that contains the required data and store it in sheet varible
+In order to do this get the total sheet count of the file and loop through the file using the count'
+int numberOfSheets = workbook.getNumberOfSheets();
+       for (int i=0;i>0;i++){
+           if(workbook.getSheetName(i).equalsIgnoreCase("Sales-2022")) {
+               XSSFSheet sheet = workbook.getSheetAt(i);
+
+           }
+->Use getSheetName(int sheetsindex) to get the sheet name by passing the index of sheet
+->Use getSheetAt(int sheetsindex) to get access to sheet by using the index of sheet
+4)Now get the access to the column from the sheet that contains the required data
+for example: There is a sales data file and you want to get details of whoever bought a cellphone.
+->For this access the row where the column names present then
+->locate the column with the name "items" which contains the cellphone value.
+TO do this iterate through the rows of the sheet using java Iterator class
+                Iterator<Row> rows = sheet.iterator();
+               Row firstRow = rows.next();
+               firstRow.ite
+
+
