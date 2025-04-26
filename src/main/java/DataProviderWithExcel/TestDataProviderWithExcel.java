@@ -1,7 +1,8 @@
 package DataProviderWithExcel;
 
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;;import java.util.HashMap;
+
+import org.testng.annotations.Test;
+import java.util.HashMap;
 
 public class TestDataProviderWithExcel extends DataProviderWithExcelData {
     @Test(dataProvider="getDataFromExcel")
